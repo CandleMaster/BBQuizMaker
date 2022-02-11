@@ -7,43 +7,43 @@ import BlackboardQuiz
 with BlackboardQuiz.Package("MyQuestionPools") as package:        
     #You may have multiple question pools in a single package, just
     #repeat this block with different pool names.
-    with package.createPool('Unique questions', description="Questions which are not generated/calculated", instructions="") as pool:
+    with package.createPool('Danni New test', description="Questions which are not generated/calculated", instructions="") as pool:
         #We can do numerical questions
-        pool.addNumQ('Douglas Adams Question', 'What is the answer to life, the universe, and everything?', 42, erramt=0.1, positive_feedback="Good, you have read well.", negative_feedback="Where have you been?")
+        # pool.addNumQ('Douglas Adams Question', 'What is the answer to life, the universe, and everything?', 42, erramt=0.1, positive_feedback="Good, you have read well.", negative_feedback="Where have you been?")
 
-        #Or multiple choice questions
-        pool.addMCQ('Shakespeare','To be, or not to be', answers=["To be.", "Not to be.", "That is the question.", "Both."],  correct=2, positive_feedback="Again, you have read well.", negative_feedback="Try reading Hamlet.")
+        # #Or multiple choice questions
+        # pool.addMCQ('Shakespeare','To be, or not to be', answers=["To be.", "Not to be.", "That is the question.", "Both."],  correct=2, positive_feedback="Again, you have read well.", negative_feedback="Try reading Hamlet.")
         
-        #Or multiple answer questions (with automatic choice of partial mark weights)
-        pool.addMAQ('Primes','Which of the following are prime numbers?', answers=["2", "3", "4", "5", "6", "87"],  correct=[0,1,3], positive_feedback="", negative_feedback="")
+        # #Or multiple answer questions (with automatic choice of partial mark weights)
+        # pool.addMAQ('Primes','Which of the following are prime numbers?', answers=["2", "3", "4", "5", "6", "87"],  correct=[0,1,3], positive_feedback="", negative_feedback="")
                 
-        # Can adjust the partial mark weights on the multiple answer questions as well
-        pool.addMAQ('Composites','Which of the following are composite numbers? (this question has custom weights)', answers=["2", "3", "4", "5", "6", "87"],  correct=[2,4,5], positive_feedback="", negative_feedback="", weights=[-33.33,-33.33,25,-33.34,25,50])
+        # # Can adjust the partial mark weights on the multiple answer questions as well
+        # pool.addMAQ('Composites','Which of the following are composite numbers? (this question has custom weights)', answers=["2", "3", "4", "5", "6", "87"],  correct=[2,4,5], positive_feedback="", negative_feedback="", weights=[-33.33,-33.33,25,-33.34,25,50])
         
-        #Short Response question
-        pool.addSRQ('CDF','What are the necessary properties of a cumulative distribution function', answer='Non-decreasing, goes to 0 at minus infinity, goes to 1 at plus infinity', positive_feedback="", negative_feedback="", rows=3, maxchars=0)
+        # #Short Response question
+        # pool.addSRQ('CDF','What are the necessary properties of a cumulative distribution function', answer='Non-decreasing, goes to 0 at minus infinity, goes to 1 at plus infinity', positive_feedback="", negative_feedback="", rows=3, maxchars=0)
         
-        #True/False question
-        pool.addTFQ('PDF','True or False: A probability density function must be less than or equal to one everywhere.', istrue=False, positive_feedback="", negative_feedback="")
+        # #True/False question
+        # pool.addTFQ('PDF','True or False: A probability density function must be less than or equal to one everywhere.', istrue=False, positive_feedback="", negative_feedback="")
         
-        #Ordering question
-        pool.addOQ('Ordering','Order the following numbers from smallest to largest:', answers=["2","5","11","18"], positive_feedback="", negative_feedback="")
+        # #Ordering question
+        # pool.addOQ('Ordering','Order the following numbers from smallest to largest:', answers=["2","5","11","18"], positive_feedback="", negative_feedback="")
         
-        #Matching question
-        pool.addMQ('Matching','Match the following:', answer_pairs=[["one","1"],["two","2"],["three","3"],["four","4"]], unmatched=["5","6"], positive_feedback="", negative_feedback="")
+        # #Matching question
+        # pool.addMQ('Matching','Match the following:', answer_pairs=[["one","1"],["two","2"],["three","3"],["four","4"]], unmatched=["5","6"], positive_feedback="", negative_feedback="")
 
-        #Maths can be included using latex
-        pool.addMCQ('Math question', 'Please solve this "display" equation: $$\\int x\,dx=?$$',
-                    answers=['$x$', '$\\frac{x^2}{2}$', '$gh$'],
-                    correct=1,
-                    positive_feedback="Well done!",
-                    negative_feedback="Sorry, but the general rule for polynomial integration is $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}$ for $n\\neq -1$"
-        )
+        # #Maths can be included using latex
+        # pool.addMCQ('Math question', 'Please solve this "display" equation: $$\\int x\,dx=?$$',
+        #             answers=['$x$', '$\\frac{x^2}{2}$', '$gh$'],
+        #             correct=1,
+        #             positive_feedback="Well done!",
+        #             negative_feedback="Sorry, but the general rule for polynomial integration is $\\int x^n\\,dx=\\frac{x^{n+1}}{n+1}$ for $n\\neq -1$"
+        # )
         
         #Embedding external images is easy too and will automatically
         #be included into the package. Other HTML can also be used for
         #formatting, I don't check it.
-        pool.addMCQ('HTML question', 'I can\'t believe that you can embed images! <img src="example_image.png" width="100"> Cool huh?',
+        pool.addMCQ('HTML question', 'I can\'t believe that you can embed images! <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Cat_looking_surprised.jpg/1200px-Cat_looking_surprised.jpg" width="100"> Cool huh?',
                     ['Really cool.', 'Well, it\'s not that impressive, it\'s basic functionality.', 'Blackboard sucks.'],
                     correct=0)
     

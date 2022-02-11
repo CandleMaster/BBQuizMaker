@@ -1,0 +1,10 @@
+{% extends 'base.html'%} {% block head %} {% endblock%} {% block body %}
+<h1>Cartridge-Word Converter</h1>
+<form action="." method="POST" enctype="multipart/form-data">
+  <label class="file-label" for="question" required
+    >Would this question go into the quiz file?</label
+  >
+  <input type="text" name="video-ids" id="video-ids" required />
+  <input class="submit" type="submit" name="submit" />
+</form>
+{% endblock %}
