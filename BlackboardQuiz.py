@@ -12,7 +12,7 @@ from PIL import Image
 from io import StringIO
 from io import BytesIO
 import itertools
-import scipy.stats
+# import scipy.stats
 import sympy
 import random
 
