@@ -14,6 +14,7 @@ EbookLib==0.17.1
 extract-msg==0.28.7
 Flask==2.0.2
 Flask-SQLAlchemy==2.5.1
+gunicorn==20.1.0
 idna==3.2
 IMAPClient==2.1.0
 isort==5.9.3
