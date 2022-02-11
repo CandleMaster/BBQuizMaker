@@ -3,7 +3,7 @@
 # platform: osx-64
 
 # ca-certificates==2021.10.8            
-bzip2==1.0.8                
+# bzip2==1.0.8                
 click==8.0.3           
 flask==2.0.2                    
 freetype==2.10.4               
