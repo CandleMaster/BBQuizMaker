@@ -10,7 +10,7 @@ def find_questions(video_ids):
     with BlackboardQuiz.Package("MyQuestionPools") as package:        
         #You may have multiple question pools in a single package, just
         #repeat this block with different pool names.
-        with package.createPool('Demo for CS', description="Questions which are not generated/calculated", instructions="") as pool:
+        with package.createPool('Customized BB Demo', description="Questions which are not generated/calculated", instructions="") as pool:
             for ids in id_list:
                 if questions[ids]:
                     all_question = questions[ids]
